@@ -7,7 +7,10 @@ $('document').ready(function() {
 
   $('button').on('click', function(){
     numberOfClicks += 1;
-    $('body').append('<div><p>' + numberOfClicks + '</p></div>');
+    var $el = $('<div class="red"><p>' + numberOfClicks + '</p></div>');
+    $('body').append($el);
+    $el.append('<button type="button" name="Swap">Swap</button>');
+    $el.append('<button type="button" name="Delete">Delete</button>');
   });
 
 });
